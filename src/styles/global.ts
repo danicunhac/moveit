@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
   * {
@@ -53,14 +53,4 @@ export default createGlobalStyle`
     color: inherit;
     text-decoration: none;
   }
-`;
-
-export const AppContainer = styled.div`
-  height: 100vh;
-  max-width: 992px;
-  margin: 0 auto;
-  padding: 2.5rem 2rem;
-
-  display: flex;
-  flex-direction: column;
 `;

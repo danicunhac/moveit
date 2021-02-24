@@ -1,4 +1,4 @@
-import { Container, Counter, Bar, Progress } from './styles';
+import { Container, Counter, Bar, Progress } from "./styles";
 
 const ExperienceBar = () => {
   return (
