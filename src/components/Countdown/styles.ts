@@ -1,31 +1,10 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const Wrapper = styled.div`
-  button {
-    width: 100%;
-    height: 5rem;
-    margin-top: 2rem;
-    display: flex;
+interface ButtonProps {
+  isActive: boolean;
+}
 
-    align-items: center;
-    justify-content: center;
-
-    border: 0;
-    border-radius: 5px;
-
-    background: var(--blue);
-    color: var(--white);
-
-    font-size: 1.25rem;
-    font-weight: 600;
-
-    transition: background-color 0.2s;
-
-    :hover {
-      background: var(--blue-dark);
-    }
-  }
-`;
+export const Wrapper = styled.div``;
 
 export const Container = styled.div`
   display: flex;
@@ -62,5 +41,62 @@ export const Container = styled.div`
   > span {
     font-size: 6.25rem;
     margin: 0 0.5rem;
+  }
+`;
+
+export const Button = styled.button<ButtonProps>`
+  width: 100%;
+  height: 5rem;
+  margin-top: 2rem;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 5px;
+  outline: 0;
+
+  background: var(--blue);
+  color: var(--white);
+
+  transition: all 0.2s;
+
+  :hover {
+    background: var(--blue-dark);
+  }
+
+  :disabled {
+    background: var(--white);
+    color: var(--title);
+    cursor: not-allowed;
+
+    border-bottom: 4px solid var(--green);
+  }
+
+  ${(props) =>
+    props.isActive &&
+    css`
+      background: var(--white);
+      color: var(--title);
+
+      :hover {
+        background: var(--red-dark);
+        color: var(--white);
+        svg {
+          path {
+            transition: fill 0.2s;
+            fill: var(--white) !important;
+          }
+        }
+      }
+    `}
+
+  font-size: 1.25rem;
+  font-weight: 600;
+
+  img,
+  svg {
+    margin-left: 16px;
   }
 `;

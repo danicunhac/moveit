@@ -1,7 +1,16 @@
-import Document, { Head, Main, NextScript, Html } from "next/document";
+import Document, {
+  Head,
+  Main,
+  NextScript,
+  Html,
+  DocumentProps,
+} from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
-export default class MyDocument extends Document {
+interface PropsData extends DocumentProps {
+  styleTags: Object;
+}
+export default class MyDocument extends Document<PropsData> {
   static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet();
 
@@ -10,7 +19,6 @@ export default class MyDocument extends Document {
     );
 
     const styleTags = sheet.getStyleElement();
-
     return { ...page, styleTags };
   }
 
@@ -25,7 +33,7 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rajdhani:wght@600&display=swap"
             rel="stylesheet"
           />
-          {this.props.styles}
+          {this.props.styleTags}
         </Head>
         <body>
           <Main />
