@@ -5,6 +5,7 @@ import CompletedChallenges from "../components/CompletedChallenges";
 import { Container, Status, Challenge } from "../styles/pages/Home/styles";
 import Countdown from "../components/Countdown";
 import ChallengeBox from "../components/ChallengeBox";
+import { CountdownProvider } from "../context/CountdownContext";
 
 export default function Home() {
   return (
@@ -12,17 +13,19 @@ export default function Home() {
       <title>Início | Moveit</title>
       <ExperienceBar />
 
-      <section>
-        <Status>
-          <Profile />
-          <CompletedChallenges />
-          <Countdown />
-        </Status>
+      <CountdownProvider>
+        <section>
+          <Status>
+            <Profile />
+            <CompletedChallenges />
+            <Countdown />
+          </Status>
 
-        <Challenge>
-          <ChallengeBox />
-        </Challenge>
-      </section>
+          <Challenge>
+            <ChallengeBox />
+          </Challenge>
+        </section>
+      </CountdownProvider>
     </Container>
   );
 }

@@ -1,45 +1,21 @@
-import React, { useCallback, useContext, useEffect, useState } from "react";
-import { ChallengesContext } from "../../context/ChallengesContext";
+import React, { useContext } from "react";
+
+import { CountdownContext } from "../../context/CountdownContext";
 
 import { Container, Wrapper, Button } from "./styles";
 
-let countdownTimeout: NodeJS.Timeout;
-
 const Countdown = () => {
-  const { startNewChallenge } = useContext(ChallengesContext);
-
-  const [time, setTime] = useState(0.1 * 60);
-  const [isActive, setIsActive] = useState(false);
-  const [hasFinished, setHasFinished] = useState(false);
-
-  const minutes = Math.floor(time / 60);
-  const seconds = time % 60;
+  const {
+    minutes,
+    seconds,
+    hasFinished,
+    isActive,
+    startCountdown,
+    resetCountdown,
+  } = useContext(CountdownContext);
 
   const [minuteLeft, minuteRight] = String(minutes).padStart(2, "0").split("");
   const [secondLeft, secondRight] = String(seconds).padStart(2, "0").split("");
-
-  const toggleCountdown = useCallback(() => {
-    if (isActive) {
-      clearTimeout(countdownTimeout);
-      setIsActive(false);
-      setTime(0.1 * 60);
-      return;
-    }
-
-    setIsActive(true);
-  }, [isActive, time]);
-
-  useEffect(() => {
-    if (isActive && time > 0) {
-      countdownTimeout = setTimeout(() => {
-        setTime(time - 1);
-      }, 1000);
-    } else if (isActive && time === 0) {
-      setHasFinished(true);
-      setIsActive(false);
-      startNewChallenge();
-    }
-  }, [isActive, time]);
 
   return (
     <Wrapper>
@@ -61,9 +37,9 @@ const Countdown = () => {
           <img src="icons/done.svg" alt="Done" />
         </Button>
       ) : (
-        <Button isActive={isActive} onClick={toggleCountdown}>
+        <>
           {isActive ? (
-            <>
+            <Button isActive={isActive} onClick={resetCountdown}>
               Abandonar o ciclo
               <svg
                 width="14"
@@ -77,14 +53,14 @@ const Countdown = () => {
                   fill="#666666"
                 />
               </svg>
-            </>
+            </Button>
           ) : (
-            <>
+            <Button isActive={isActive} onClick={startCountdown}>
               Iniciar um ciclo
               <img src="icons/next.svg" alt="Start" />
-            </>
+            </Button>
           )}
-        </Button>
+        </>
       )}
     </Wrapper>
   );
