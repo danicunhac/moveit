@@ -5,7 +5,7 @@ export const Container = styled.div`
 
   background: var(--white);
   border-radius: 5px;
-  box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow);
   padding: 1.5rem 2rem;
 
   display: flex;

@@ -20,7 +20,7 @@ export const Container = styled.div`
     justify-content: space-evenly;
 
     background: var(--white);
-    box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow);
     border-radius: 5px;
     font-size: 8.5rem;
     text-align: center;
