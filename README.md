@@ -2,9 +2,9 @@
   <img src="https://i.imgur.com/4sK58aC.png" />
 </p>
 
-Aplicação desenvolvida durante a Next Level Week #4 da Rocketseat 🚀.
+<h3 align="center"> Aplicação desenvolvida durante a Next Level Week #4 da Rocketseat 🚀 </h3>
 
-### 🧪 Tecnologias 
+## 🧪 Tecnologias 
 
 - React 💜
 - NextJS 🔥
@@ -12,6 +12,6 @@ Aplicação desenvolvida durante a Next Level Week #4 da Rocketseat 🚀.
 - Context API ⚙
 - Typescript 💙
 
-### 💻 Tela
+## 💻 Tela
 
 <img src="https://i.imgur.com/h1hyqj3.png" />
