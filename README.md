@@ -32,7 +32,7 @@ $ yarn dev
 ## 🔖 Layout
 Você pode ver o layout da aplicação no link abaixo:
 
-Clique em <a href="https://www.figma.com/file/y4HHY1Nh7A4PAPyBObznuD/Move.it-2.0-(Copy)?node-id=160%3A2761">Layout</a> para acesso.
+Clique <a href="https://www.figma.com/file/y4HHY1Nh7A4PAPyBObznuD/Move.it-2.0-(Copy)?node-id=160%3A2761">aqui</a> para acessar.
 
 ## 💻 Tela
 
