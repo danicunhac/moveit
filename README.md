@@ -1,4 +1,6 @@
-# Moveit - Next Level Week #4
+<p align="center">
+  <img src="https://i.imgur.com/4sK58aC.png" />
+</p>
 
 Aplicação desenvolvida durante a Next Level Week #4 da Rocketseat 🚀.
 
