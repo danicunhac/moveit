@@ -1,10 +1,10 @@
-import { useContext } from "react";
-import { ChallengesContext } from "../../context/ChallengesContext";
-import { Container, Counter, Bar, Progress } from "./styles";
+import { useContext } from 'react';
+import { ChallengesContext } from '../../context/ChallengesContext';
+import { Container, Counter, Bar, Progress } from './styles';
 
 const ExperienceBar = () => {
   const { currentExperience, experienceToNextLevel } = useContext(
-    ChallengesContext
+    ChallengesContext,
   );
 
   const percentToNextLevel =

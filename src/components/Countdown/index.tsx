@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React, { useContext } from 'react';
 
-import { CountdownContext } from "../../context/CountdownContext";
+import { CountdownContext } from '../../context/CountdownContext';
 
-import { Container, Wrapper, Button } from "./styles";
+import { Container, Wrapper, Button } from './styles';
 
 const Countdown = () => {
   const {
@@ -14,8 +14,8 @@ const Countdown = () => {
     resetCountdown,
   } = useContext(CountdownContext);
 
-  const [minuteLeft, minuteRight] = String(minutes).padStart(2, "0").split("");
-  const [secondLeft, secondRight] = String(seconds).padStart(2, "0").split("");
+  const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split('');
+  const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('');
 
   return (
     <Wrapper>

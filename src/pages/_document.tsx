@@ -4,8 +4,8 @@ import Document, {
   NextScript,
   Html,
   DocumentProps,
-} from "next/document";
-import { ServerStyleSheet } from "styled-components";
+} from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
 
 interface PropsData extends DocumentProps {
   styleTags: Object;
@@ -14,8 +14,8 @@ export default class MyDocument extends Document<PropsData> {
   static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet();
 
-    const page = renderPage((App) => (props) =>
-      sheet.collectStyles(<App {...props} />)
+    const page = renderPage((App: React.FC) => props =>
+      sheet.collectStyles(<App {...props} />),
     );
 
     const styleTags = sheet.getStyleElement();

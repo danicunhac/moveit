@@ -1,6 +1,6 @@
-import React, { useCallback, useContext } from "react";
-import { ChallengesContext } from "../../context/ChallengesContext";
-import { CountdownContext } from "../../context/CountdownContext";
+import React, { useCallback, useContext } from 'react';
+import { ChallengesContext } from '../../context/ChallengesContext';
+import { CountdownContext } from '../../context/CountdownContext';
 
 import {
   Container,
@@ -8,11 +8,11 @@ import {
   Active,
   FailButton,
   SuccessButton,
-} from "./styles";
+} from './styles';
 
 const ChallengeBox = () => {
   const { activeChallenge, resetChallenge, completeChallenge } = useContext(
-    ChallengesContext
+    ChallengesContext,
   );
   const { resetCountdown } = useContext(CountdownContext);
 

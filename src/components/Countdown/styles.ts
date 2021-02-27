@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 interface ButtonProps {
   isActive: boolean;
@@ -74,7 +74,7 @@ export const Button = styled.button<ButtonProps>`
     border-bottom: 4px solid var(--green);
   }
 
-  ${(props) =>
+  ${props =>
     props.isActive &&
     css`
       background: var(--white);
