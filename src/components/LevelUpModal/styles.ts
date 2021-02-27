@@ -46,8 +46,8 @@ export const Container = styled.div`
 
 export const CloseButton = styled.button`
   position: absolute;
-  right: 0.5rem;
-  top: 0.5rem;
+  right: 1rem;
+  top: 1rem;
 
   background: transparent;
   border: 0;
