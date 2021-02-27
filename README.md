@@ -29,6 +29,12 @@ $ yarn
 $ yarn dev
 ```
 
+## 🔥 Preview
+
+Clique [aqui](https://moveit-gold-seven.vercel.app/) para acessar.
+
+Hospedado na [Vercel](https://vercel.com).
+
 ## 🔖 Layout
 Você pode ver o layout da aplicação no link abaixo:
 
