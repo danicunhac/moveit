@@ -12,6 +12,23 @@
 - Context API ⚙
 - Typescript 💙
 
+## 🚀 Iniciando o projeto
+
+Clone o projeto e acesse a pasta
+
+```bash
+$ git clone https://github.com/danicunhac/moveit.git && cd moveit
+```
+
+Siga os passos abaixo
+```bash
+# Install the dependencies
+$ yarn
+
+# Start the project
+$ yarn dev
+```
+
 ## 🔖 Layout
 Você pode ver o layout da aplicação no link abaixo:
 
