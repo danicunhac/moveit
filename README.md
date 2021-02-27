@@ -12,10 +12,33 @@
 - Context API ⚙
 - Typescript 💙
 
+## 🚀 Iniciando o projeto
+
+Clone o projeto e acesse a pasta
+
+```bash
+$ git clone https://github.com/danicunhac/moveit.git && cd moveit
+```
+
+Siga os passos abaixo
+```bash
+# Install the dependencies
+$ yarn
+
+# Start the project
+$ yarn dev
+```
+
+## 🔥 Preview
+
+Clique [aqui](https://moveit-gold-seven.vercel.app/) para acessar.
+
+Hospedado na [Vercel](https://vercel.com).
+
 ## 🔖 Layout
 Você pode ver o layout da aplicação no link abaixo:
 
-Clique em <a href="https://www.figma.com/file/y4HHY1Nh7A4PAPyBObznuD/Move.it-2.0-(Copy)?node-id=160%3A2761">Layout</a> para acesso.
+Clique <a href="https://www.figma.com/file/y4HHY1Nh7A4PAPyBObznuD/Move.it-2.0-(Copy)?node-id=160%3A2761">aqui</a> para acessar.
 
 ## 💻 Tela
 
