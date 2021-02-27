@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   height: 100vh;
@@ -13,9 +13,19 @@ export const Container = styled.div`
     flex: 1;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6.25rem;
+    padding: 4rem 0;
+
     align-content: center;
+
+    @media (min-width: 782px) {
+      grid-template-columns: 1fr 1fr;
+      gap: 6.25rem;
+    }
+
+    @media (max-width: 781px) {
+      grid-template-rows: 1fr 1fr;
+      gap: 2.5rem;
+    }
   }
 `;
 
